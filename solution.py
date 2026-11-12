@@ -3,7 +3,8 @@ import aiohttp  # HTTP запросы
 
 
 async def get_matrix(url: str) -> List[int]:  # Получение матрицы по ссылке
-    async with aiohttp.ClientSession() as session:  # Создаём сессию
+    timeout = aiohttp.ClientTimeout(total=10)  # Ждём не больше 10 секунд
+    async with aiohttp.ClientSession(timeout=timeout) as session:
         async with session.get(url) as response:  #  GEtзапрос
             response.raise_for_status()  # ошибки запроса
             text = await response.text()  # ответ сервера
