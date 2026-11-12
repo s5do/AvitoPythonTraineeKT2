@@ -1,1 +1,8 @@
-# AvitoPythonTraineeKT2
+# Тестовое задание авито (Python)
+
+Решение тестового задания для стажёра Python-разработчика.
+
+Оригинал задания:
+https://github.com/avito-tech/python-trainee-assignment
+
+Задача: асинхронно загрузить матрицу и обойти её по спирали.
